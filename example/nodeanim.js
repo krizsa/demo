@@ -83,8 +83,8 @@ http.createServer(function (req, res) {
   res.end("<title>CanvasDemo</title><meta http-equiv='refresh' content='0.3;'>"+
     "<img alt='Embedded Image' src='data:image/png;base64,"+buf.toBase64()+"'>"+
      "<img alt='Embedded Image' src='data:image/png;base64,"+buf2.toBase64()+"'>");
-}).listen(4000, "127.0.0.1");
-console.log('Server running at http://127.0.0.1:4000/');
+}).listen(process.env.C9_PORT, "run.cloud9ide.com");
+console.log('Server running at http://run.cloud9ide.com:' + process.env.C9_PORT);
 //}).listen(4000, "vps6782.xlshosting.net");
 //console.log('Server running at http://http://vps6782.xlshosting.net:4000/');
 
